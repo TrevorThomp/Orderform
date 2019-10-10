@@ -13,7 +13,9 @@ function populateForm() {
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
     var option = document.createElement('option');
-    option.textContent = Product.allProducts[i].name;
+    var productName = Product.allProducts[i].name;
+    option.textContent = productName;
+    option.setAttribute('value', 'productName');
     selectElement.appendChild(option);
   }
   return selectElement;
