@@ -60,7 +60,7 @@ function removeItemFromCart(event) {
 
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   if (event.target.textContent === 'X') {
-    cart.removeItem(event.target.parentElement.id);
+    cart.removeItem(event.target.parentElement);
   }
   // TODO: Save the cart back to local storage
   localStorage.setItem('cart', JSON.stringify(cart.items));
